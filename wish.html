@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        body{
+            height: 100vh;
+            background: #fde1e2;
+            display: flex;
+            flex-direction: column;
+    font-family: "Oregano", cursive;
+        }
+.cards-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.cards{
+    width: 220px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.cards.flipped{
+    transform: rotateY(180deg);
+}
+
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.front{
+    background: #ff6f91;
+    color: white;
+}
+
+.back{
+    background: white;
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 10px;
+    text-align: center;
+}
+
+.wish-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 20px;
+}
+
+
+.wish-btn:hover{
+    transform: translateY(5px);
+}
+     </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>*click on the white tiles</p>
+    <div class="cards-container">
+    <div class="cards">
+        <div class="card-face front">💌</div>
+        <div class="card-face back">You</div>
+    </div>
+
+    <div class="cards">
+        <div class="card-face front">🌹</div>
+        <div class="card-face back">Are</div>
+    </div>
+
+    <div class="cards">
+        <div class="card-face front">💖</div>
+        <div class="card-face back">My happy thought</div>
+    </div>
+
+    <div class="cards">
+        <div class="card-face front">✨</div>
+        <div class="card-face back">And</div>
+    </div>
+
+    <div class="cards">
+        <div class="card-face front">👑</div>
+        <div class="card-face back">I Love You My Princess</div>
+    </div>
+</div>
+
+<a href="./main-wish.html"><button class="wish-btn">Click Again  🧸</button></a>
+
+<script src="script.js"></script>
+</body>
+</html>
